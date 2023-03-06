@@ -4,9 +4,13 @@
 
 .header {
     padding-top: 24px;
+    padding-bottom: 131px;
+    background: #EEEFF1;
+    min-height: 100vh;
     &__inner {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 123px;
     }
     .logo {
         display: block;
@@ -18,6 +22,8 @@
         padding: 17px 0;
         &__list {
             display: flex;
+            color: $black-color;
+            font-weight: 500;
             &-item + .menu__list-item{
                 margin-left: 40px;
             }
@@ -39,6 +45,78 @@
         max-width: 208px;
         margin-left: 20px;
     }
+
+    .promo {
+        display: flex;
+        &__info {
+            padding-top: 31px;
+            max-width: 597px;
+        }
+        &__title {
+            color: $black-color;
+            font-weight: 800;
+            font-size: 124px;
+            line-height: 140px;
+            margin-bottom: 30px;
+        }
+        &__descr {
+            font-size: 24px;
+            line-height: 35px;
+            margin-bottom: 60px;
+        }
+        &__buttons {
+            display: flex;
+        }
+        &__btn {
+            margin-right: 30px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 26px;
+            text-transform: uppercase;
+            color: $black-color;
+            min-width: 225px;
+
+        }
+        &__media {
+            position: relative;
+        }
+        &__award {
+            position: absolute;
+            right: 0;
+            top: 31px;
+
+        }
+        &__main-img {
+        }
+        &__rating {
+            max-width: 280px;
+            padding: 20px 24px;
+            background-color: #FFFFFF;
+            border-radius: 24px;
+            position: absolute;
+            bottom: 181px;
+            left: 44px;
+            &-star {
+                margin-bottom: 12px;
+                .star__list {
+                    display: flex;
+                    &-item {
+                    }
+                    &-img {
+                    }
+                }
+            }
+            &-descr {
+                font-size: 19px;
+                line-height: 26px;
+            }
+        }
+        
+        
+        
+        
+    }
+    
 }
 
 

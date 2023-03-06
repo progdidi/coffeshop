@@ -8,6 +8,14 @@
     margin: 0;
 }
 
+body { 
+    font-family: 'Jost', sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    color: $text-color;
+    font-weight: 400;
+}
+
 .container {
     max-width: 1259px;
     padding: 0 10px;
