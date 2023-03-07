@@ -8,12 +8,17 @@
     margin: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: $black-color;
+}
+
 body { 
     font-family: 'Jost', sans-serif;
     font-size: 18px;
     line-height: 30px;
     color: $text-color;
     font-weight: 400;
+    background: linear-gradient(173.34deg, #FFFFFF 0%, #FFFFFF 0%, rgba(243, 244, 245, 0.2) 11.74%, #F3F4F5 27.92%, rgba(243, 244, 245, 0) 44.79%, rgba(243, 244, 245, 0.68) 60.42%, #F3F4F5 79.17%, #FFFFFF 100%);
 }
 
 .container {
@@ -33,4 +38,11 @@ body {
     text-transform: uppercase;
     color: #FFFFFF;
     padding: 15px 30px;
+}
+
+.section__title {
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 70px;
+    color: $black-color;
 }
