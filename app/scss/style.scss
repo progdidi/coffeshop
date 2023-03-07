@@ -270,6 +270,41 @@
     }
 }
 
+.app {
+    margin-bottom: 220px;
+    background-image: url(../images/app/app-bgi.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: contain;
+    &__inner {
+        display: flex;
+        padding-left: 30px;
+    }
+    &__info {
+        max-width: 512px;
+        padding-top: 183px;
+        padding-bottom: 105px;
+        &-title {
+            margin-bottom: 30px;
+        }
+        &-descr {
+            font-size: 24px;
+            line-height: 35px;
+            margin-bottom: 60px;
+        }
+        &-btn {
+            max-width: 267px;
+        }
+    }
+    
+    &__media {
+        &-img {
+        }
+    }
+}
+
+
+
 
 
 
