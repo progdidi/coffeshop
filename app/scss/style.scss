@@ -311,6 +311,7 @@
         background: linear-gradient(142.42deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
         filter: drop-shadow(0px 20px 60px rgba(163, 168, 179, 0.15));
         border-radius: 16px;
+        margin-right: 35px;
         &-img {
         }
         &-content {           
@@ -336,6 +337,7 @@
     }
     &__info {
         max-width: 454px;
+        margin-left: 100px;
         &-title {
             margin-bottom: 40px;
         }
@@ -372,6 +374,7 @@
                 height: 60px;
                 margin-right: 24px;
                 box-shadow: 0px 12px 30px rgba(205, 209, 214, 0.28);
+                cursor: pointer;
             }
             &-img {
             }
