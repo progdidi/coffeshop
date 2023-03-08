@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-    max-width: 1259px;
+    max-width: 1260px;
     padding: 0 10px;
     margin: 0 auto;
 }
@@ -45,6 +45,12 @@ body {
     font-size: 64px;
     line-height: 70px;
     color: $black-color;
+}
+
+.footer__title {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 50px;
 }
 
 .star__list {
