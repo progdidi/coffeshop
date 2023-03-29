@@ -1,14 +1,36 @@
 $(function(){
     //promoBtn color
    const promoBtn = document.querySelectorAll('.promo__btn');
+   const promoBtnParent = document.querySelector('.promo__buttons');
 
-   promoBtn.forEach((btn) => {
-        btn.addEventListener('mouseover', () => {
-            btn.classList.add('black-btn');
-            btn.previousElementSibling.classList.remove('black-btn');
-        })
+   function removeBlackClass() {
+    promoBtn.forEach(btn => {
+      btn.classList.remove('black-btn');
+      btn.style.color="#1B1B1D";
+      btn.style.textDecoration="underline";
+    });
+   }
 
+   function addBlackClass(i) {
+    promoBtn[i].classList.add('black-btn');
+    promoBtn[i].style.color = "#FFF";
+    promoBtn[i].style.textDecoration = "none";
+   }
+
+   addBlackClass(0);
+
+   promoBtnParent.addEventListener('mouseover', (e) => {
+    const target = e.target;
+    if(target && target.classList.contains('promo__btn')) {
+      promoBtn.forEach((item, i) => {
+        if (target == item) {
+          removeBlackClass();
+          addBlackClass(i);
+        }
+      })
+    }
    })
+   
 
    //review slider
    const slider = document.querySelector('.review__items'),

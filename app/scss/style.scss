@@ -10,6 +10,7 @@
     &__top {
         display: flex;
         justify-content: flex-end;
+        align-items: center;
         margin-bottom: 123px;
         position: relative;
     }
@@ -45,8 +46,12 @@
         }
     }
     .vouchers__link {
+        display: inline-block;
         max-width: 208px;
         margin-left: 20px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 26px;
     }
 
     .promo {
@@ -69,15 +74,18 @@
         }
         &__buttons {
             display: flex;
+            align-items: center;
         }
         &__btn {
-            margin-right: 30px;
             font-weight: 500;
             font-size: 18px;
             line-height: 26px;
             text-transform: uppercase;
             color: $black-color;
+            text-decoration: underline;
             min-width: 225px;
+            padding: 20px 40px;
+            display: inline-block;
 
         }
         &__media {
@@ -298,11 +306,18 @@
 
 .review {
     margin-bottom: 210px;
+    position: relative;
+    background-image: url(../images/review/bgi.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
     &__inner {
         display: flex;
         justify-content: space-between;
+    
     }
     &__slider {
+        
     }
     &__items {
     }
@@ -543,7 +558,6 @@
 
 
 }
-
 
 
 

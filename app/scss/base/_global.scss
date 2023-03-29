@@ -35,10 +35,16 @@ body {
     font-weight: 500;
     font-size: 18px;
     line-height: 30px;
+    text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
     padding: 15px 30px;
     cursor: pointer;
+}
+
+.active {
+    color: #fff;
+    text-decoration: none;
 }
 
 .section__title {
