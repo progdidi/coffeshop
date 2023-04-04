@@ -1,0 +1,55 @@
+@import 'base/global';
+@import 'mixins/var';
+@import 'base/reset';
+
+@media (max-width: 1290px) {
+    .header {
+        &__buttons {
+            display: block;
+        }
+
+        .logo {
+            position: relative;
+            z-index: 10;
+        }
+
+        .menu {
+            &__btn {
+                display: flex;
+                right: 10px;
+                top: 90px;
+                position: absolute;
+                z-index: 10;
+                cursor: pointer;
+            }
+            &__list {
+                position: absolute;
+                z-index: 5;
+                background: linear-gradient(173.34deg, #FFFFFF 0%, #FFFFFF 0%, rgba(243, 244, 245, 0.2) 11.74%, #F3F4F5 27.92%, rgba(243, 244, 245, 0) 44.79%, rgba(243, 244, 245, 0.68) 60.42%, #F3F4F5 79.17%, #FFFFFF 100%);
+                flex-direction: column;
+                padding-top: 100px;
+                height: 50vh;
+                left: 0;
+                right: 0;
+                top: 0;
+                align-items: center;
+                justify-content: center;
+                transform: translateY(-100%);
+                transition: all 0.5s ease;
+                &.menu__list-active {
+                    transform: translateY(0);
+                }
+                &-item {
+                    padding: 20px 0;
+                    padding-left: 0;
+                }
+                &-item + .menu__list-item {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    
+    
+}
