@@ -37,7 +37,7 @@
         &__btn {
             width: 40px;
             height: 30px;
-            display: flex;
+            display: none;
             flex-direction: column;
             justify-content: space-between;
             padding: 0;
@@ -171,6 +171,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        animation: explore-items 3s;
         &-title {
             font-weight: 600;
             font-size: 36px;
@@ -196,6 +197,12 @@
         }
     }
 }
+
+@keyframes explore-items { 
+    0%{ transform: translate3d(0, 100%, 0); }
+    50%{ transform: translate3d(0, 0, 0); }
+    100%{ transform: translate3d(0, 100%, 0); }
+  }
 
 .order {
     padding-bottom: 70px;
