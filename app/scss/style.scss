@@ -6,7 +6,6 @@
     padding-top: 24px;
     padding-bottom: 131px;
     background: #EEEFF1;
-    min-height: 100vh;
     &__top {
         display: flex;
         justify-content: flex-end;
@@ -29,7 +28,12 @@
             color: $black-color;
             font-weight: 500;
             &-item {
-                margin-right: 40px;            
+                margin-right: 40px;  
+                border-bottom: 3px solid transparent; 
+                transition: all 0.3s;
+                &:hover {
+                    border-bottom-color:$black-color;
+                }         
             }
             &-link {
             }
@@ -58,6 +62,7 @@
         background-color: #fff;
         border-radius: 50%;
         padding: 16px;
+        cursor: pointer;
         &-img {
         }
     }
@@ -82,6 +87,10 @@
             font-size: 124px;
             line-height: 140px;
             margin-bottom: 30px;
+            position: relative;
+            span {
+                display: inline-block;
+            }
         }
         &__descr {
             font-size: 24px;
@@ -141,10 +150,21 @@
 
 .explore {
     padding: 150px 0 190px;
-    background-image: url(../images/explore/background.png);
-    background-repeat: no-repeat;
-    background-position: top left;
-    background-size: contain;
+    // background-image: url(../images/explore/background.png);
+    // background-repeat: no-repeat;
+    // background-position: -13% 13%;
+    position: relative;
+    &::before {
+        position: absolute;
+        z-index: 2;
+        content: '';
+        background-image: url(../images/explore/background.png);
+        top: 8%;
+        left: -10%;
+        width: 447px;
+        height: 600px;
+        
+    }
     &__title {
         margin-bottom: 24px;
         text-align: center;
@@ -235,7 +255,17 @@
 }
 
 .best {
-    margin-bottom: 200px;
+    margin-bottom: 130px;
+    position: relative;
+    &::before {
+        position: absolute;
+        content: '';
+        background-image: url(../images/best/background.png);
+        height: 400px;
+        width: 265px;
+        right: 0;
+        top: -20%;
+    }
     &__title {
         text-align: center;
         margin-bottom: 24px;
@@ -311,8 +341,19 @@
     margin-bottom: 220px;
     background-image: url(../images/app/app-bgi.png);
     background-repeat: no-repeat;
-    background-position: top left;
-    background-size: contain;
+    background-position-y: -40%;
+    position: relative;
+    &::after {
+        position: absolute;
+        content: '';
+        background-image: url(../images/app/review-bg.png);
+        background-repeat: no-repeat;
+        bottom: 0;
+        left: 0;
+        width: 400px;
+        height: 600px;
+
+    }
     &__inner {
         display: flex;
         padding-left: 30px;
