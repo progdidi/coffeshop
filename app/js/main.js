@@ -86,6 +86,8 @@ $(function(){
         menu.classList.toggle('menu__list-active');
     })
 
+    new WOW().init();
+
 
 
 });

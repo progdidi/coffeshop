@@ -1,6 +1,8 @@
 @import 'base/global';
 @import 'mixins/var';
 @import 'base/reset';
+@import '../../node_modules/animate-scss/animate.scss';
+
 
 .header {
     padding-top: 24px;
@@ -168,6 +170,7 @@
     &__title {
         margin-bottom: 24px;
         text-align: center;
+        @include bounceIn();
     }
     &__descr {
         font-size: 24px;
@@ -191,7 +194,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        animation: explore-items 3s;
+        @include fadeIn;
         &-title {
             font-weight: 600;
             font-size: 36px;
@@ -217,12 +220,6 @@
         }
     }
 }
-
-@keyframes explore-items { 
-    0%{ transform: translate3d(0, 100%, 0); }
-    50%{ transform: translate3d(0, 0, 0); }
-    100%{ transform: translate3d(0, 100%, 0); }
-  }
 
 .order {
     padding-bottom: 70px;
@@ -286,7 +283,8 @@
     &__item {
         max-width: 393px;
         position: relative;     
-        display: flex;   
+        display: flex;  
+        @include fadeInRight;
         &-info {
             width: 100%;
             background: linear-gradient(142.42deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
@@ -338,7 +336,7 @@
 }
 
 .app {
-    margin-bottom: 220px;
+    padding-bottom: 220px;
     background-image: url(../images/app/app-bgi.png);
     background-repeat: no-repeat;
     background-position-y: -40%;
@@ -348,7 +346,7 @@
         content: '';
         background-image: url(../images/app/review-bg.png);
         background-repeat: no-repeat;
-        bottom: 0;
+        bottom: -20%;
         left: 0;
         width: 400px;
         height: 600px;
@@ -460,7 +458,6 @@
         .slider__navigation {
             &-btn {
                 padding: 15px;
-                background-color: red;
                 background-color: #fff;
                 border-radius: 50%;
                 border: none;
