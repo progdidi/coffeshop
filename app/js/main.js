@@ -1,4 +1,18 @@
 $(function(){
+  window.addEventListener('scroll', () => {
+    const ScrollHeight = window.pageYOffset;
+    const headerWrapper = document.querySelector('.header__top-wrapper');
+    const headerTopHeight = headerWrapper.getBoundingClientRect().height;
+
+    if(ScrollHeight > headerTopHeight) {
+      headerWrapper.classList.add('header-fixed')
+    } else {
+      headerWrapper.classList.remove('header-fixed')
+    }
+    console.log(window.pageYOffset);
+  })
+
+
     //promoBtn color
    const promoBtn = document.querySelectorAll('.promo__btn');
    const promoBtnParent = document.querySelector('.promo__buttons');
