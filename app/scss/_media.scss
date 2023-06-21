@@ -2,24 +2,33 @@
 @import 'mixins/var';
 @import 'base/reset';
 
+@media (max-width: 1400px) {
+    .explore::before {
+        z-index: -2;
+    }
+}
 @media (max-width: 1290px) {
     .header {
         &__buttons {
             display: block;
         }
 
+        &__top {
+            padding-right: 60px;
+        }
+
         .logo {
-            position: relative;
+            position: absolute;
             z-index: 10;
-            margin: 0 auto;
+            left: 10px;
         }
 
         .menu {
             &__btn {
                 display: flex;
-                right: 10px;
-                top: 10px;
-                left: 0;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
                 position: absolute;
                 z-index: 10;
                 cursor: pointer;
@@ -27,16 +36,18 @@
             &__list {
                 position: absolute;
                 z-index: 5;
-                background: linear-gradient(173.34deg, #FFFFFF 0%, #FFFFFF 0%, rgba(243, 244, 245, 0.2) 11.74%, #F3F4F5 27.92%, rgba(243, 244, 245, 0) 44.79%, rgba(243, 244, 245, 0.68) 60.42%, #F3F4F5 79.17%, #FFFFFF 100%);
+                background-color: #F3F4F5 ;
                 flex-direction: column;
-                padding-top: 100px;
-                height: 50vh;
+                padding-top: 70px;
+                margin: 0 -10px;
+                margin-top: -24px;
+                height: auto;
                 left: 0;
                 right: 0;
                 top: 0;
                 align-items: center;
                 justify-content: center;
-                transform: translateY(-100%);
+                transform: translateY(-200%);
                 transition: all 0.5s ease;
                 &.menu__list-active {
                     transform: translateY(0);
@@ -125,11 +136,20 @@
                     line-height: 26px;
                 }
             }
+
+            &__info {
+                margin-bottom: 60px;
+            }
+
+            &__main {
+                &-img {
+                    object-fit: cover;
+                    width: 65%;
+                }
+            }
              
         }
     }
-
-    
     
 }
 
@@ -193,23 +213,17 @@
     }
 
     .review {
-        &__inner {
-            flex-direction: column;
-            position: relative;
-        }
-        .slider__navigation {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        &__slider {
-            order: 2;
-            width: 100%;
-            margin-bottom: 40px;
-        }
         &__info {
-            width: 100%;
+            margin-left: 40px;
+            padding-top: 70px;
+            &-title {
+                line-height: 52px;
+                font-size: 45px;
+            }
+
+            &-rating {
+                margin-bottom: 40px;
+            }
         }
     }
 }
@@ -227,11 +241,35 @@
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 860px) {
+    .header {
+        &__top {
+            padding-right: 50px;
+        }
+        .cart__btn {
+            width: 40px;
+            height: 40px;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .vouchers__link {
+            margin-left: 20px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 20px;
+            padding: 10px 15px;
+            margin-left: 10px;
+        }
+    }
 
     .explore {
         &__items {
             display: block;
+        }
+        &::before {
+            left: -25%;
         }
     }
 
@@ -242,8 +280,37 @@
     .best {
         margin-bottom: 30px;
     }
-}
 
+    .review {
+        &__inner {
+            flex-direction: column;
+            position: relative;
+        }
+        &__items {
+            margin-bottom: 40px;
+        }
+        .slider__navigation {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &__slider {
+            order: 2;
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+        &__info {
+            width: 100%;
+            margin-left: 0;
+            text-align: center;
+            &-title {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
 
 @media (max-width: 560px) {
     .header {
@@ -338,7 +405,7 @@
     }
 }
 
-@media (max-width: 470px) {
+@media (max-width: 480px) {
     .header {
         .promo {
             &__title {
@@ -352,6 +419,16 @@
                 margin-bottom: 10px;
             }
              
+        }
+
+        .vouchers__link {
+            display: block;
+            position: absolute;
+            bottom: -50px;
+            right: 0;
+            &.hide {
+                display: none;
+            }
         }
     }
 
@@ -383,6 +460,14 @@
                 font-size: 56px;
                 line-height: 61px;
             }
+        }
+    }
+
+    .review {
+        &__item {
+            max-width: 340px;
+            width: 80%;
+            margin-right: 10px;
         }
     }
 }

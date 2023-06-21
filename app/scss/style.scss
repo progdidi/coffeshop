@@ -80,6 +80,7 @@
         font-weight: 500;
         font-size: 15px;
         line-height: 26px;
+        
     }
 
     .promo {
@@ -152,6 +153,7 @@
         
         
     }
+
     
 }
 
@@ -163,7 +165,9 @@
     width: 100%;
     background-color: #EEEFF1;
     box-shadow: 0px 12px 30px rgba(205, 209, 214, 0.28);
+    
 }
+
 
 .explore {
     padding: 150px 0 190px;
@@ -409,8 +413,16 @@
     }
     &__slider {
         width: 60%;
+        overflow: hidden;
+        position: relative;
+        &-wraper {
+            width: 100%;
+            overflow: hidden;
+        }
     }
     &__items {
+        width: 400%;
+        display: flex;
     }
     &__item {
         max-width: 468px;
