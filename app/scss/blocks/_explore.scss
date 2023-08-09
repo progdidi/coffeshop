@@ -1,0 +1,125 @@
+@import '../base/global';
+@import '../mixins/var';
+@import '../base/reset';
+@import '../../../node_modules/animate-scss/animate.scss';
+
+.explore {
+    padding: 150px 0 190px;
+    // background-image: url(../images/explore/background.png);
+    // background-repeat: no-repeat;
+    // background-position: -13% 13%;
+    position: relative;
+    &::before {
+        position: absolute;
+        z-index: 2;
+        content: '';
+        background-image: url(../images/explore/background.png);
+        top: 8%;
+        left: -10%;
+        width: 447px;
+        height: 600px;
+        
+    }
+    &__title {
+        margin-bottom: 24px;
+        text-align: center;
+        @include bounceIn();
+    }
+    &__descr {
+        font-size: 24px;
+        line-height: 35px;        
+        max-width: 604px;
+        margin: 0 auto;
+        margin-bottom: 90px;
+        text-align: center;
+    }
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+    }
+    &__item {
+        padding: 40px 37px 40px 40px;
+        background: linear-gradient(152.09deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+        filter: drop-shadow(0px 30px 60px rgba(163, 168, 179, 0.15));
+        border-radius: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include fadeIn;
+        &-title {
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 52px;
+            margin-bottom: 8px;
+            align-self: flex-start;
+        }
+        &-descr {
+            font-size: 24px;
+            line-height: 35px;
+            margin-bottom: 60px;
+        }
+        &-img {
+            display: block;
+            margin-bottom: 60px;
+        }
+        &-btn {
+            width: 225px;
+            padding: 15px 30px;
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 30px;
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .explore::before {
+        z-index: -2;
+    }
+}
+
+@media (max-width: 1070px) {
+    .explore {
+        padding-top: 90px;
+        padding-bottom: 60px;
+        &__items {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &__item {
+            max-width: 400px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            &:last-child {
+                grid-column: 1/3;
+            }
+        }
+    }
+
+    
+    
+}
+
+@media (max-width: 860px) {
+    
+
+    .explore {
+        &__items {
+            display: block;
+        }
+        &::before {
+            left: -25%;
+        }
+    }
+
+
+    
+}
+
+@media (max-width: 480px) {
+    .explore {
+        background-image: none;
+    }
+
+}

@@ -1,0 +1,52 @@
+@import '../base/global';
+@import '../mixins/var';
+@import '../base/reset';
+@import '../../../node_modules/animate-scss/animate.scss';
+
+.order {
+    padding-bottom: 70px;
+    margin-bottom: 100px;
+    &__inner {
+        display: flex;
+        align-items: center;
+    }
+    &__info {
+        padding-top: 90px;
+        padding-bottom: 50px;
+        max-width: 512px;
+        &-title {
+            margin-bottom: 30px;
+        }
+        &-descr {
+            margin-bottom: 60px;
+            font-size: 24px;
+            line-height: 35px;
+        }
+        &-btn {
+            max-width: 191px;
+        }
+    }
+    
+}
+
+@media (max-width: 1070px) {
+
+    .order {
+        &__inner {
+            display: block;
+        }
+        &__info {
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+    
+}
+
+
+@media (max-width: 860px) {
+
+    .order {
+        margin-bottom: 30px;
+    }
+}

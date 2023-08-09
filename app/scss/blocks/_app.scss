@@ -1,0 +1,69 @@
+@import '../base/global';
+@import '../mixins/var';
+@import '../base/reset';
+@import '../../../node_modules/animate-scss/animate.scss';
+
+.app {
+    padding-bottom: 220px;
+    background-image: url(../images/app/app-bgi.png);
+    background-repeat: no-repeat;
+    background-position-y: -40%;
+    position: relative;
+    &::after {
+        position: absolute;
+        content: '';
+        background-image: url(../images/app/review-bg.png);
+        background-repeat: no-repeat;
+        bottom: -20%;
+        left: 0;
+        width: 400px;
+        height: 600px;
+
+    }
+    &__inner {
+        display: flex;
+        padding-left: 30px;
+        align-items: center;
+    }
+    &__info {
+        max-width: 512px;
+        padding-top: 183px;
+        padding-bottom: 105px;
+        &-title {
+            margin-bottom: 30px;
+        }
+        &-descr {
+            font-size: 24px;
+            line-height: 35px;
+            margin-bottom: 60px;
+        }
+        &-btn {
+            max-width: 267px;
+        }
+    }
+    
+}
+
+@media (max-width: 950px) {
+    .app {
+        &__inner {
+            display: block;
+            text-align: center;
+        }
+        &__info {
+            max-width: 100%;
+        }
+
+    }
+}
+
+@media(max-width: 480px) {
+    .app {
+        &__info {
+            &-title {
+                font-size: 56px;
+                line-height: 61px;
+            }
+        }
+    }
+}
